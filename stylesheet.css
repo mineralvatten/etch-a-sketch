@@ -1,0 +1,16 @@
+
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+#maingrid {
+    align-items: center;
+    background-color: black;
+    flex-direction:row;
+    display:flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    width:800px;
+}
