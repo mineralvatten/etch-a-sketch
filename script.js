@@ -19,7 +19,22 @@ for (sub of Array.from(subdivs)) {
     }
 }
 */
-
+function promptHandler() {
+    input = prompt("Give the number of squares on each side:", "16");
+    if (0 < Number(input) <= 100) {
+        maingrid.innerHTML = "";
+        create_grid(Number(input))
+    }
+    else {
+        console.log("Invalid input, give a number between 1 and 100 inclusive.")
+    }
+}
+function createButton () {
+    btn = document.createElement('button');
+    btn.textContent = "Change grid sidelength";
+    btn.addEventListener('click', promptHandler);
+    document.querySelector('body').appendChild(btn);
+}
 function handleHover (event) {
     event.target.style.background="black";
 }
@@ -36,6 +51,7 @@ function create_grid(sideLength) {
         maingrid.appendChild(subElement);
     }
 }
+createButton();
 create_grid(16);
 
 /*
