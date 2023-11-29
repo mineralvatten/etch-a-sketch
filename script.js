@@ -19,6 +19,10 @@ for (sub of Array.from(subdivs)) {
     }
 }
 */
+
+function handleHover (event) {
+    event.target.style.background="black";
+}
 function create_grid(sideLength) {
     for (i = 0; i < sideLength**2; i++) {
         subElement = document.createElement('div');
@@ -27,11 +31,12 @@ function create_grid(sideLength) {
         subElement.style.width = String(800/sideLength) + "px";
         subElement.style.height= String(800/sideLength) + "px";
         subElement.style.aspectRatio = "1/1";
-        subElement.style.background = "black";
+        subElement.style.background = "white";
+        subElement.addEventListener('mouseover', handleHover);
         maingrid.appendChild(subElement);
     }
 }
-create_grid(100);
+create_grid(16);
 
 /*
     for (i = 0; i < sideLength **2; i ++) {
