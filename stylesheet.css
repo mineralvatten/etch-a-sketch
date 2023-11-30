@@ -2,8 +2,10 @@
 
 body{
     display:flex;
-    justify-content: center;
+    flex-direction:row;
+    justify-content:center;
     align-items:center;
+    flex-wrap:wrap;
 }
 #maingrid {
     align-items: center;
